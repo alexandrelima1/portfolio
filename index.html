@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexandre de Lima - Portfolio - RU: 4875496</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Alexandre de Lima - RU: 4875496</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre Mim</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hello">
+    <h1>Bem-vindo</h1>
+    <p>Desenvolvedor apaixonado por tecnologia e inovação.</p>
+    <button class="scroll-btn" onclick="scrollToSection('about')">Saiba Mais</button>
+  </section>
+
+
+  <!-- Codigo da Seção Sobre Mim -->
+  <section id="about" class="about">
+    <h2>Sobre Mim</h2>
+    <p>Sou desenvolvedor Back-End e estudante, com experiência em Python, Java, PostgreSQL, Hibernate e Node.js. <br>
+        Apesar de ainda estar começando minha jornada profissional, tenho me dedicado a criar projetos pessoais para ganhar prática<br>
+        e montar um portfólio que mostre meu potencial. Sou apaixonado por tecnologia, curioso por novas ferramentas e sempre em busca de aprender mais.<br>
+        Adoro desafios e acredito que eles são a melhor forma de crescer e melhorar como desenvolvedor.</p>
+        <br>
+        Escolaridade: Graduação Análise e Desenvolvimento de Sistemas
+        UNINTER
+        <br>
+        <br>
+
+    <a href="https://github.com/alexandrelima1" target="_blank">Meu GitHub</a>
+    <a href="https://www.linkedin.com/in/delimaalexandre/" target="_blank">Meu LinkedIn</a>
+
+  </section>
+
+
+  <!-- Codigo da Seção Projetos-->
+
+  <section id="projects" class="projects">
+    <h2>Projetos</h2>
+    <div class="project-grid">
+      <!-- Card do Projeto 1 -->
+      <div class="project-card expandable" onclick="toggleProjectDetails(this)">
+        <div class="project-summary">
+          <h3>Switch Access</h3>
+          <p>Gestão de Conexões Cisco</p>
+        </div>
+        <div class="project-details">
+          <p>
+            Sistema desenvolvido para gestão de conexões em ativos de rede Cisco, simplificando tarefas de infraestrutura com funções predefinidas que evitam o uso de SSH e comandos shell. Utilizando Python, Netmiko, Paramiko, Tkinter e CustomTkinter, o software reduz erros e facilita a integração de novos colaboradores, melhorando o aprendizado e a segurança nas operações de rede.
+          </p>
+          <div class="project-images">
+            <img src="imgs/LoginSwitchCisco.png" alt="Login">
+            <img src="imgs/InterfaceSwitchCisco.png" alt="Interface Inicial">
+            <img src="imgs/MenuSwitchCisco.png" alt="Opções de Uso">
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card do Projeto 2 -->
+    <div class="project-card expandable" onclick="toggleProjectDetails(this)">
+        <div class="project-summary">
+          <h3>Conex - Controle e Expedição</h3>
+          <p>Gerenciador de Estoque</p>
+        </div>
+        <div class="project-details">
+          <p>
+            O Conex é uma solução prática e eficiente para controlar o estoque vigente, gerenciar entradas e saídas de equipamentos, componentes e periféricos. Com foco em organização e segurança, o sistema oferece:
+          </p>
+          <ul>
+            <li><strong>Controle de Acesso de Usuários:</strong> Níveis de acesso personalizados para maior segurança e gestão de permissões.</li>
+            <li><strong>Registros Detalhados:</strong> Logs de operações armazenados no banco de dados, garantindo rastreabilidade.</li>
+            <li><strong>Relatórios e Validação:</strong> Geração de relatórios detalhados para análise e suporte à tomada de decisões.</li>
+            <li><strong>Interface Intuitiva:</strong> Desenvolvido com Swing e aprimorado com FlatLaf, garantindo uma experiência visual moderna.</li>
+          </ul>
+          <p>
+            Criado em **Java** com banco de dados **PostgreSQL**, o sistema oferece confiabilidade e desempenho para pequenas e médias empresas.
+          </p>
+          <div class="project-images project-2-images">
+            <img src="imgs/InterfaceInicialConex.png" alt="Tela inicial">
+            <img src="imgs/ListarEstoqueConex.png" alt="Tela inicial">
+            <img src="imgs/RegistrarBaixaConex.png" alt="Captura de tela do sistema - Relatórios">
+            <img src="imgs/RegistrarRetornoConex.png" alt="Tela inicial">
+            <img src="imgs/GerenciarEquipamentosConex.png" alt="Tela inicial">
+            <img src="imgs/MovimentacoesConex.png" alt="Tela inicial">
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card do Projeto 3 -->
+      <div class="project-card expandable" onclick="toggleProjectDetails(this)">
+        <div class="project-summary">
+          <h3>Todo List</h3>
+          <p>Meu Primeiro Website Responsivo</p>
+        </div>
+        <div class="project-details">
+          <p>
+            Um site desenvolvido para mostrar boas práticas de design adaptativo, utilizando HTML, CSS e JS para atender a diferentes dispositivos e tamanhos de tela.
+          </p>
+          <div class="project-images">
+            <img src="imgs/InterfaceLista.png" alt="Captura de tela do website - Tela desktop">
+            <img src="imgs/ListaFuncional.png" alt="Captura de tela do website - Tela mobile">
+            <img src="imgs/TarefaCompletaLista.png" alt="Captura de tela do website - Tela mobile">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Codigo da seção Contato -->
+  <section id="contact" class="contact">
+    <h2>Contato</h2>
+    <p>Preencha o formulário abaixo e entrarei em contato o mais breve possível.</p>
+    <form id="contactForm" class="contact-form">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" id="name" placeholder="Seu nome" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Seu email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Mensagem</label>
+        <textarea id="message" placeholder="Sua mensagem" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Enviar</button>
+    </form>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2024 Alexandre de Lima. Todos os direitos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

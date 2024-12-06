@@ -1,0 +1,307 @@
+/* Variáveis de cores */
+:root {
+    --background-color: #f9f9f9;
+    --primary-color: #6c63ff;
+    --secondary-color: #ffffff;
+    --text-color: #333;
+    --border-color: #ddd;
+    --hover-color: #554cdb;
+  }
+  
+  /* Reset básico */
+  body, h1, h2, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo geral do corpo */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Seção Hello */
+  .hello {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .hello h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hello p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .scroll-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-btn:hover {
+    background-color: var(--hover-color);
+    color: var(--secondary-color);
+  }
+  
+  /* Seção Sobre */
+  .about, .projects, .contact {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .about h2, .projects h2, .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Seção Projetos */
+  .project-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .project-card.hidden {
+    display: none;
+  }  
+  
+  .project-card {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative; /* Permite que os filhos usem posição absoluta */
+    overflow: visible; /* Permite que os elementos transbordem para fora */
+  }
+  
+  .project-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+  
+  .expandable {
+    position: relative;
+  }
+  
+  .project-details {
+    display: none;
+    margin-top: 15px;
+    text-align: left;
+  }
+  
+  .project-details p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  .project-images {
+    position: relative; /* Define o contexto para o posicionamento absoluto */
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    overflow: visible; /* Permite que os elementos filhos transbordem */
+  }
+  
+  .project-images img {
+    width: 100%;
+    max-width: 250px; /* Tamanho padrão */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Destaque */
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out; /* Suavidade no zoom */
+    position: relative; /* Posição padrão */
+    z-index: 1;
+    pointer-events: auto; /* Garante que o hover funcione diretamente na imagem */
+  }
+  
+  .project-images img:hover {
+    transform: scale(2.5); /* Aumenta a imagem */
+    position: relative; /* Mantém a imagem no fluxo do DOM */
+    z-index: 10; /* Garante que a imagem fique acima dos outros elementos */
+  }
+
+
+/* Estilo padrão para .project-images */
+.project-images {
+    position: relative; /* Define o contexto para hover */
+    display: grid; /* Configuração de grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    grid-template-rows: repeat(2, auto); /* 2 linhas */
+    gap: 15px; /* Espaçamento entre as imagens */
+    justify-items: center; /* Centraliza imagens horizontalmente */
+    align-items: center; /* Centraliza imagens verticalmente */
+  }
+  
+  /* Imagens no Projeto 2 */
+  .project-2-images img {
+    width: 100%;
+    max-width: 350px; /* Tamanho padrão */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Destaque */
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+    position: relative; /* Mantém a posição padrão */
+    z-index: 1;
+    pointer-events: auto; /* Garante que o hover funcione diretamente na imagem */
+  }
+  
+  /* Zoom no hover */
+  .project-2-images img:hover {
+    transform: scale(5); /* Aplica o zoom */
+    z-index: 10; /* Eleva a camada */
+    overflow: visible; /* Permite transbordo */
+  }
+  
+  /* Prevenção de corte (aplicado ao grid) */
+  .project-2-images {
+    overflow: visible; /* Permite que as imagens transbordem além do grid */
+  }
+  
+  
+  
+  .project-card.expanded {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .project-card.expanded .project-details {
+    display: block;
+  }
+  
+  /* Seção Contato */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 4px var(--primary-color);
+  }
+  
+  .contact-form textarea {
+    resize: none;
+  }
+  
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--hover-color);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+  }
+  
+  
